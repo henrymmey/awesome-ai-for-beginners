@@ -4,10 +4,11 @@
 
 ## Contents
 
-- [Which AI for What](#most-useful-ai-tools)
+- [Most Useful AI Tools](#most-useful-ai-tools)
 - [Learning AI Basics](#learning-ai-basics)
 - [Free vs Paid](#free-vs-paid)
 - [Prompting for Beginners](#prompting-for-beginners)
+- [Privacy-Oriented Tools](#privacy-oriented-tools)
 
 ## Most Useful AI Tools
 
@@ -75,5 +76,13 @@ Prompting is the art of talking to an AI. Here are the basics to get you started
 - [LearnPrompting.org](https://learnprompting.org) - A comprehensive and free guide to prompt engineering.
 - [PromptingGuide.ai](https://www.promptingguide.ai) - High-quality guides and resources for LLM prompting.
 - [Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library) - Expert-level prompt examples for various tasks.
+
+## Privacy-Oriented Tools
+
+For users who care about data protection and don't want their conversations used for training.
+
+- [Le Chat by Mistral](https://chat.mistral.ai) - European company with strong privacy focus and transparent data policy.
+- [Duck.ai](https://duck.ai) - From DuckDuckGo. Lets you use multiple AI models (Claude, GPT, Mistral etc.) anonymously without creating an account and without training data usage.
+- [Google AI Edge Gallery + Gemma 4](https://github.com/google-ai-edge/gallery) - Run powerful AI models completely locally on your modern [Android phone](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) or [iPhone](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (fully offline, nothing leaves the device).
 
 Contributions welcome! Read the [contribution guidelines](contributing.md) first.
