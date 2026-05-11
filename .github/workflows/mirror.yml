@@ -1,0 +1,22 @@
+name: Mirror to Codeberg
+
+on:
+  push:
+    branches: [main]
+  delete:
+
+jobs:
+  mirror_to_codeberg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Mirror to Codeberg
+        uses: wearerequired/git-mirror-action@v1
+        with:
+          source-repo: "https://github.com/${{ github.repository }}.git"
+          # Hier bauen wir Username und Token direkt in die URL ein:
+          destination-repo: "https://henrymmey:${{ secrets.CODEBERG_TOKEN }}@codeberg.org/henrymmey/awesome-ai-for-beginners.git"
