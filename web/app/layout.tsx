@@ -62,6 +62,55 @@ export default function RootLayout({
     >
       <body className="min-h-full font-sans">
         {children}
+
+        <footer className="mt-12 border-t border-border bg-secondary-background">
+          <div className="mx-auto max-w-[1200px] px-6 py-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-col gap-2">
+              <div className="text-xs text-foreground/60">
+                © {new Date().getFullYear()} Awesome AI for Beginners
+              </div>
+              <div className="text-xs text-foreground/60">
+                Website licensed under
+                <a
+                  href="https://www.gnu.org/licenses/gpl-3.0.en.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 font-medium hover:underline"
+                >
+                  GPL-3.0
+                </a>
+                , content under
+                <a
+                  href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 font-medium hover:underline"
+                >
+                  CC0-1.0
+                </a>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <a
+                href="http://henrymeyer.de/legal/imprint"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:underline"
+              >
+                Imprint
+              </a>
+              <a
+                href="http://henrymeyer.de/legal/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:underline"
+              >
+                Privacy Legacy
+              </a>
+            </div>
+          </div>
+        </footer>
+
         <Analytics />
       </body>
     </html>
