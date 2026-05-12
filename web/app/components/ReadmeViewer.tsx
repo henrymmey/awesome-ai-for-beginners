@@ -249,6 +249,8 @@ export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
                     Curated by HenryMM <ExternalLink className="ml-1 h-3 w-3" />
                   </a>
                 </span>
+
+                {/* Legal links moved to site footer */}
               </div>
             </div>
           </div>
