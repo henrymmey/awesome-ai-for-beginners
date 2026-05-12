@@ -85,6 +85,4 @@ For users who care about data protection and don't want their conversations used
 - [Duck.ai](https://duck.ai) - From DuckDuckGo. Lets you use multiple AI models (Claude, GPT, Mistral etc.) anonymously without creating an account and without training data usage.
 - [Google AI Edge Gallery + Gemma 4](https://github.com/google-ai-edge/gallery) - Run powerful AI models completely locally on your modern [Android phone](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) or [iPhone](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (fully offline, nothing leaves the device).
 
-Curated by [HenryMM](https://henrymeyer.de/) with ❤️
-
 Contributions welcome! Read the [contribution guidelines](contributing.md) first.
