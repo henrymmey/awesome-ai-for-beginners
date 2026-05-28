@@ -1,17 +1,39 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
-import { BookOpen, Search, ExternalLink } from "lucide-react";
+import React, { useEffect, useMemo, useState } from "react";
+import { Search, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import ReactMarkdown, { type Components } from "react-markdown";
 
 type ReadmeViewerProps = {
   markdown: string;
 };
 
+const LANGUAGE_COOKIE = "preferred-language";
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
+
+const getLanguageFromPath = (pathname: string) =>
+  pathname.startsWith("/de") ? "de" : "en";
+
+const readCookie = (name: string) => {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie
+    .split("; ")
+    .find((entry) => entry.startsWith(`${name}=`));
+  return match ? decodeURIComponent(match.split("=").slice(1).join("=")) : null;
+};
+
+const writeLanguageCookie = (language: "en" | "de") => {
+  document.cookie = `${LANGUAGE_COOKIE}=${language}; path=/; max-age=${COOKIE_MAX_AGE}; samesite=lax`;
+};
+
 // Simplified utility functions
 const normalize = (value: string) => value.trim().toLowerCase();
 const slugify = (value: string) =>
   value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
@@ -102,6 +124,23 @@ const extractHeadings = (markdown: string) => {
 
 export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
   // Remove HTML comments from the markdown source
+  const pathname = usePathname();
+  const router = useRouter();
+  const currentLanguage = getLanguageFromPath(pathname);
+
+  useEffect(() => {
+    const preferredLanguage = readCookie(LANGUAGE_COOKIE);
+
+    if (!preferredLanguage) {
+      writeLanguageCookie(currentLanguage);
+      return;
+    }
+
+    if (preferredLanguage !== currentLanguage) {
+      router.replace(preferredLanguage === "de" ? "/de" : "/");
+    }
+  }, [currentLanguage, router]);
+
   const cleanedMarkdown = useMemo(
     () => markdown.replace(/<!--[\s\S]*?-->/g, ""),
     [markdown],
@@ -113,6 +152,11 @@ export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
   );
   const tocSource = query ? filteredMarkdown : cleanedMarkdown;
   const headings = useMemo(() => extractHeadings(tocSource), [tocSource]);
+
+  const selectLanguage = (language: "en" | "de") => {
+    writeLanguageCookie(language);
+    router.push(language === "de" ? "/de" : "/");
+  };
 
   const components: Components = {
     h1: ({ children }) => (
@@ -196,10 +240,43 @@ export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background">
-      <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-10 px-6 py-12 lg:flex-row lg:px-10 lg:py-24">
+      <div className="mx-auto flex w-full max-w-300 flex-col gap-10 px-6 py-12 lg:flex-row lg:px-10 lg:py-24">
         <aside className="lg:w-72 shrink-0 order-2 lg:order-1">
           <div className="sticky top-12 space-y-8">
             <div>
+              <div className="mb-4 flex items-center gap-2 rounded-md border border-border bg-secondary-background p-1 text-xs font-bold uppercase tracking-wider">
+                <Link
+                  href="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    selectLanguage("en");
+                  }}
+                  aria-current={currentLanguage === "en" ? "page" : undefined}
+                  className={`flex-1 rounded px-3 py-2 text-center transition-colors ${
+                    currentLanguage === "en"
+                      ? "bg-foreground text-background"
+                      : "text-foreground/60 hover:text-foreground"
+                  }`}
+                >
+                  EN
+                </Link>
+                <Link
+                  href="/de"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    selectLanguage("de");
+                  }}
+                  aria-current={currentLanguage === "de" ? "page" : undefined}
+                  className={`flex-1 rounded px-3 py-2 text-center transition-colors ${
+                    currentLanguage === "de"
+                      ? "bg-foreground text-background"
+                      : "text-foreground/60 hover:text-foreground"
+                  }`}
+                >
+                  DE
+                </Link>
+              </div>
+
               <label className="text-xs font-bold uppercase tracking-wider mb-2 block">
                 Search
               </label>
@@ -223,7 +300,7 @@ export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
                   <a
                     key={heading.id}
                     href={`#${heading.id}`}
-                    className="block border-l-2 -ml-[2px] border-transparent pl-4 py-1 text-foreground/70 hover:text-foreground hover:border-foreground font-medium transition-colors"
+                    className="block border-l-2 -ml-0.5 border-transparent pl-4 py-1 text-foreground/70 hover:text-foreground hover:border-foreground font-medium transition-colors"
                   >
                     {heading.text}
                   </a>
@@ -257,7 +334,7 @@ export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
         </aside>
 
         <main className="flex-1 min-w-0 order-1 lg:order-2">
-          <div className="prose-container max-w-[750px]">
+          <div className="prose-container max-w-187.5">
             {filteredMarkdown ? (
               <ReactMarkdown components={components}>
                 {filteredMarkdown}
