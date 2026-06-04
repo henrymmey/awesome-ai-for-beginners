@@ -89,6 +89,17 @@ export default function RootLayout({
                   CC0-1.0
                 </a>
               </div>
+              <div className="text-xs text-foreground/60">
+                Part of
+                <a
+                  href="https://hmlabs.eu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 font-medium hover:underline"
+                >
+                  HMLabs
+                </a>
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <a
