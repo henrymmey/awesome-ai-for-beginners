@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://awesome-ai-for-beginners.vercel.app",
+    url: "https://awesome-ai-for-beginners.hmlabs.eu",
     title: "Awesome AI for Beginners",
     description:
       "Curated resources to understand and use AI without any technical background.",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       "Curated resources to understand and use AI without any technical background.",
     creator: "@awesomeai",
   },
-  metadataBase: new URL("https://awesome-ai-for-beginners.vercel.app"),
+  metadataBase: new URL("https://awesome-ai-for-beginners.hmlabs.eu"),
 };
 
 export default function RootLayout({
@@ -92,7 +92,7 @@ export default function RootLayout({
             </div>
             <div className="flex items-center gap-4">
               <a
-                href="http://henrymeyer.de/legal/imprint"
+                href="https://hmlabs.eu/legal/imprint"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:underline"
@@ -100,7 +100,7 @@ export default function RootLayout({
                 Imprint
               </a>
               <a
-                href="http://henrymeyer.de/legal/privacy"
+                href="https://hmlabs.eu/legal/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:underline"
