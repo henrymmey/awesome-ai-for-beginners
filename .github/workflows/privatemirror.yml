@@ -6,7 +6,7 @@ on:
   delete:
 
 jobs:
-  mirror_to_codeberg:
+  mirror_to_forgejo:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
