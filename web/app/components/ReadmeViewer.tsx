@@ -318,7 +318,7 @@ export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
                 </a>
                 <span className="text-xs text-foreground/60">
                   <a
-                    href="https://henrymeyer.de/?utm_source=awesomeaiforbeginners&utm_medium=credit&utm_campaign=website"
+                    href="https://henrymeyer.de"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center font-medium hover:text-foreground transition-colors"

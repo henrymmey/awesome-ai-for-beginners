@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://awesome-ai-for-beginners.hmlabs.eu",
+    url: "https://aiforbeginners.henrymeyer.de",
     title: "Awesome AI for Beginners",
     description:
       "Curated resources to understand and use AI without any technical background.",
@@ -92,7 +92,7 @@ export default function RootLayout({
             </div>
             <div className="flex items-center gap-4">
               <a
-                href="https://hmlabs.eu/legal/imprint"
+                href="https://henrymeyer.de/legal/imprint"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:underline"
@@ -100,7 +100,7 @@ export default function RootLayout({
                 Imprint
               </a>
               <a
-                href="https://hmlabs.eu/legal/privacy"
+                href="https://henrymeyer.de/legal/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:underline"
