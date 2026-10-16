@@ -44,6 +44,7 @@ Comparison of the major tools: Which one is best for what?
 
 **Images & Photos**
 
+- [AI 만화 번역기](https://www.mangatranslate.com/ko/ai-manga-translator/) - MangaTranslate는 설치나 코딩 없이 웹에서 만화·웹툰·만화 이미지의 글자를 인식하고 제품이 지원하는 모든 번역 언어로 옮기는 도구입니다. 말풍선과 그림의 배치를 살려 번역 이미지를 만들고, 여러 장 일괄 처리와 번역문 편집을 지원하며, 모바일·데스크톱 웹과 API로 이용할 수 있습니다. 무료 사용량과 더 많은 작업을 위한 유료 옵션이 있습니다.
 - [Adobe Firefly](https://firefly.adobe.com) - Generative AI designed for creators, integrated into Photoshop and Illustrator for easy image editing and generation.
 - [Nano Banana (Google)](https://gemini.google/overview/image-generation/) - Google's advanced image generation model, integrated into many Google services.
 
