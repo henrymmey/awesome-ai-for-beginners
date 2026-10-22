@@ -63,6 +63,8 @@ Understanding the fundamentals helps you get better results. Here are some begin
 - [99% of Beginners Don't Know the Basics of AI](https://youtu.be/nVyD6THcvDQ) - A great starting point to understand how AI actually thinks.
 - [You’re not behind (yet): How to learn AI in 18 minutes](https://youtu.be/0Tch0N5nsRU) - A fast-paced overview of the current AI landscape and how to keep up.
 
+- [DisconfirmAI Reading](https://disconfirmai.com/en/reading) - Dated AI-assisted briefs with publisher/source links; open the originals to check context and claims.
+
 ## Free vs Paid
 
 Is it worth paying $20/month? These resources help you decide:
