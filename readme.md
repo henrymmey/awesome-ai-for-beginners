@@ -76,6 +76,7 @@ Prompting is the art of talking to an AI. Here are the basics to get you started
 - [LearnPrompting.org](https://learnprompting.org) - A comprehensive and free guide to prompt engineering.
 - [PromptingGuide.ai](https://www.promptingguide.ai) - High-quality guides and resources for LLM prompting.
 - [Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library) - Expert-level prompt examples for various tasks.
+- [Prompt Generator](https://trypromptgenerator.com) - Writes prompts in the syntax of the AI tool you pick (ChatGPT, Claude, Gemini, Midjourney, Nano Banana, Veo and more). Free without an account, 10 prompts a day.
 
 ## Privacy-Oriented Tools
 

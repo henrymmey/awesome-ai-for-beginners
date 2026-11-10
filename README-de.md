@@ -76,6 +76,7 @@ Prompting ist die Kunst, mit einer KI zu kommunizieren. Hier sind die Grundlagen
 - [LearnPrompting.org](https://learnprompting.org) – Ein umfassender und kostenloser Leitfaden zum Prompt Engineering.
 - [PromptingGuide.ai](https://www.promptingguide.ai) – Hochwertige Anleitungen und Ressourcen für LLM-Prompting.
 - [Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library) – Prompt-Beispiele auf Expertenniveau für verschiedene Aufgaben.
+- [Prompt Generator](https://trypromptgenerator.com) – Schreibt Prompts in der Syntax des gewählten KI-Tools (ChatGPT, Claude, Gemini, Midjourney, Nano Banana, Veo und weitere). Kostenlos ohne Konto, 10 Prompts pro Tag.
 
 ## Datenschutzorientierte Tools
 
